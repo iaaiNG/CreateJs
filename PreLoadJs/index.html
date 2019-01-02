@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>preLoadJs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="../easeljs.min.js"></script>
-  <script src="../tweenjs.min.js"></script>
-  <script src="../soundjs.min.js"></script>
-  <script src="../preloadjs.min.js"></script>
+  <script src="../preloadjs.js"></script>
+  <style>
+    .image {
+      max-width: 320px;
+      max-height: 240px;
+      border: 1px solid #555;
+      margin: 5px;
+    }
+  </style>
 </head>
+
 <body>
-  <img id="q1">
-  <img id="q2">
-  <img id="q3">
-  <canvas id="myCanvas" width="400" height="400" style="background:#eee"></canvas>
+  <img class="image" id="winter" />
+  <img class="image" id="spring" />
+  <img class="image" id="summer" />
   <script src="app.js"></script>
 </body>
+
 </html>
