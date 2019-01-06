@@ -5,13 +5,13 @@ function circle(){
     switch (type){
       case circle.TYPE_RED:
         this.setColor('#ff0000')
+        
         break
       case circle.TYPE_GREEN:
         this.setColor('#00ff00')
         break
     }
   }
-
   this.setColor = function(color){
     this.graphics
       .beginFill(color)

@@ -7,27 +7,33 @@ text.y = 100
 text.rotation = 20
 stage.addChild(text)
 
-console.log(text.getBounds())
+console.log(1, text.getMeasuredHeight())
+console.log(2, text.getMeasuredLineHeight())
+console.log(3, text.getBounds().height)
+
+text.lineHeight = 50
+text.lineWidth  = 250
+// text.outline = 1
+text.textBaseLine = 'middle'
 var rect = new createjs.Shape()
 rect.graphics
   .beginFill("red")
-  .drawRect(-10,-10,text.getBounds().width+20,text.getBounds().height+18)
+  .drawRect(-10,-10,250,text.getMeasuredHeight())
 rect.x = text.x
 rect.y = text.y
 rect.rotation = 20
 
 stage.addChildAt(rect,0)
-
-createjs.Ticker.setFPS(100)
-createjs.Ticker.addEventListener('tick', handlerTick)
-function handlerTick(){
-  count++
-  
-  text.text = `text on canvas Num ${count}!`
-  rect.graphics
-  .clear()
-  .beginFill("red")
-  .drawRect(-10,-10,text.getBounds().width+20,text.getBounds().height+18)
-  stage.update()
-}
+stage.update()
+// createjs.Ticker.setFPS(100)
+// createjs.Ticker.addEventListener('tick', handlerTick)
+// function handlerTick(){
+//   count++
+//   text.text = `text on canvas Num ${count}!`
+//   rect.graphics
+//   .clear()
+//   .beginFill("red")
+//   .drawRect(-10,-10,text.getBounds().width+20,text.getBounds().height+20)
+//   stage.update()
+// }
 

@@ -29,14 +29,15 @@ rect.addEventListener('dblclick', function(e){
 // createjs.Ticker.addEventListener('tick', handlerTick)
 var speedX = 10
 
-
+stage.addEventListener('tick', handlerTick)
 
 function handlerTick(){
-  if(rect.x<=0){
-    rect.x += 10;
-  }
-  if(rect.x<=0){
-    rect.x += 10;
-  }
-  stage.update()
+  // console.log(123)
+  // if(rect.x<=0){
+  //   rect.x += 10;
+  // }
+  // if(rect.x<=0){
+  //   rect.x += 10;
+  // }
+  // stage.update()
 }

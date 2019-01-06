@@ -14,9 +14,7 @@ var ss = new createjs.SpriteSheet({
 })
 
 var s = new createjs.Sprite(ss, "run")
-s.x = 100
-s.y = 50
 
 stage.addChild(s)
-createjs.Ticker.framerate = 30
+createjs.Ticker.timingMode = createjs.Ticker.RAF;
 createjs.Ticker.addEventListener('tick', stage)
